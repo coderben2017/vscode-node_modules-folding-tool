@@ -16,11 +16,11 @@
 	"categories": [
 		"Keymaps"
 	],
+	"publisher": "CoderBen",
+	"main": "./dist/extension.js",
 	"activationEvents": [
 		"onCommand:node-modules-folder.fold"
 	],
-	"publisher": "coderben2016",
-	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
@@ -30,13 +30,17 @@
 		],
 		"keybindings": [
 			{
-        "command": "node-modules-folder.fold",
+				"command": "node-modules-folder.fold",
         "key": "alt+w",
         "mac": "alt+w"
       }
 		]
 	},
+	"repository": {
+		"url": "https://github.com/coderben2017/vscode-node_modules-folding-tool"
+	},
 	"scripts": {
+		"build": "vsce package",
 		"vscode:prepublish": "npm run package",
 		"compile": "webpack",
 		"watch": "webpack --watch",
